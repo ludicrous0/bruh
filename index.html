@@ -29,14 +29,14 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/cCGKdGr8l/";
+    const URL = "https://teachablemachine.withgoogle.com/models/ZfPHqKAOL/";
 
     let model, webcam, labelContainer, maxPredictions;
 
     // Load the image model and setup the webcam
     async function init() {
-        const modelURL = "https://teachablemachine.withgoogle.com/models/cCGKdGr8l/model.json";
-        const metadataURL = "https://teachablemachine.withgoogle.com/models/cCGKdGr8l/metadata.json";
+        const modelURL = "https://teachablemachine.withgoogle.com/models/ZfPHqKAOL/model.json";
+        const metadataURL = "https://teachablemachine.withgoogle.com/models/ZfPHqKAOL/metadata.json";
 
         // load the model and metadata
         // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
@@ -73,12 +73,11 @@
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
                 prediction[i].className + ": " + Math.round(prediction[i].probability.toFixed(2)*100) + "%";
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+            //labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }
-    
 </script>
-
+<p style="color:blue;">classPrediction</p>
 </body>
 
 </html>
